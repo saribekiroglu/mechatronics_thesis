@@ -1,0 +1,11 @@
+# Her klasöre gelen değişikliği sahibi onaylar.
+# MET=@EmirTokac YSY=@yusufserdary BBA=@BerkerBArslan YTS=@saribekiroglu
+*               @EmirTokac
+/docs/          @EmirTokac
+/elektrik/      @EmirTokac
+/mekanik/       @yusufserdary
+/firmware/      @BerkerBArslan
+/istasyon/      @saribekiroglu
+/bom/           @saribekiroglu @EmirTokac
+/literatur/     @saribekiroglu
+/testler/       @EmirTokac @yusufserdary @BerkerBArslan @saribekiroglu
