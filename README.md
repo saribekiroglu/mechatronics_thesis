@@ -25,3 +25,11 @@ Güneş enerjisi santrali panellerini su ve rulo fırça ile temizleyen, ≈8,5 
 GitHub Desktop kullanıyorsan LFS'yi otomatik kurar; kilitleme için komut satırı gerekir.
 
 > Bu repo **gizli (private)** kalmalıdır: tasarım patent açısından hassas, makale PDF'leri telifli.
+
+## Yapay zeka ile çalışma
+
+**Kodlama ajanları** (Claude Code, Codex, Gemini CLI, Copilot, Cursor): Repoyu açman yeterli. `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` dosyalarını kendileri okur, kim olduğunu bulur, durumu özetler ve kurallara göre çalışır. Ayrıca anlatman gerekmez.
+
+**Web sohbetleri** (claude.ai, ChatGPT, Gemini sitesi) repoyu kendiliğinden görmez. Sohbetin başına şunu yapıştır ve `AGENTS.md`, `STATUS.md`, `docs/karar_kaydi.md` dosyalarını ekle:
+
+> Ben [adın] ([MET/YSY/BBA/YTS]). Ekli AGENTS.md bizim bitirme projemizin kuralları ve bağlamı; STATUS.md kimin ne yaptığını, karar_kaydi.md alınan kararları gösteriyor. Bunlara göre çalış, kararlarla çelişen öneri yapma; bir kararı değiştirmek gerekiyorsa açıkça söyle. Şimdi şunu istiyorum: ...

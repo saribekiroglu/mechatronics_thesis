@@ -1,6 +1,25 @@
 # AGENTS.md – Yapay zeka ajanları için proje kuralları
 
-Bu dosya, ekip üyelerinin yapay zeka ajanlarının (Claude, ChatGPT/Codex, Gemini, Copilot vb.) bu repoda nasıl çalışacağını tanımlar. **Her oturumun başında bu dosyayı, `STATUS.md`'yi ve `docs/karar_kaydi.md`'yi oku.**
+Bu dosya, ekip üyelerinin yapay zeka ajanlarının (Claude Code, Codex, Gemini CLI, Copilot, Cursor vb.) bu repoda nasıl çalışacağını tanımlar. Bu araçlar dosyayı repo açıldığında kendiliğinden okur. **Her oturumun başında bu dosyayı, `STATUS.md`'yi ve `docs/karar_kaydi.md`'yi oku.**
+
+## Oturum başlangıç protokolü (her ajan bunu kendiliğinden yapar)
+
+Kullanıcı sana ayrıca bir şey anlatmak zorunda değildir. Her oturumun başında:
+
+1. **Kullanıcıyı tanı:** `git config user.name` / `user.email` veya GitHub kullanıcı adından kim olduğunu bul (tablo aşağıda). Emin değilsen tek soru sor: "Ekipte hangisisin? (MET / YSY / BBA / YTS)".
+2. **Bağlamı oku:** bu dosya → `STATUS.md` → `docs/karar_kaydi.md` → `docs/gorevler.md` → kullanıcının sahip olduğu klasörün `README.md`'si.
+3. **Güncelle:** `git pull` ile son hâli al. Kullanıcının üzerinde olduğu görevi `STATUS.md`'den ve açık GitHub Issue'larından bul.
+4. **Özetle (3–5 satır):** "Sen X'sin, şu an Y görevindesin, son kararlar şunlar, sıradaki iş şu" – sonra kullanıcının isteğine geç.
+5. **İş bitince:** dal aç → commit → PR (şablonu doldur) → `STATUS.md` satırını güncelle → gerekiyorsa karar kaydına satır ekle.
+
+Kullanıcı "ne yapmalıyım?" derse `docs/gorevler.md`'de kendi adına atanmış, bitmemiş ve tarihi en yakın görevi öner.
+
+| GitHub kullanıcı adı | Kısaltma |
+|---|---|
+| EmirTokac | MET |
+| yusufserdary | YSY |
+| BerkerBArslan | BBA |
+| saribekiroglu | YTS |
 
 ## Proje özeti
 
