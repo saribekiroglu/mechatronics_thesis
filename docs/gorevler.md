@@ -1,5 +1,7 @@
 # Görev listesi (R3 – Proje Planlama Raporundan)
 
+> Bu liste başlangıç planıdır. Görevler, süreler ve sorumlular ekip tarafından istendiği gibi değiştirilebilir.
+
 H1 = 21.09.2026 (MKT403 güz). B = MKT402 bahar haftaları. Durum: ⬜ yapılacak · 🟨 yapılıyor · ✅ bitti
 
 | ID | Görev | Sorumlu | Zaman | Durum |

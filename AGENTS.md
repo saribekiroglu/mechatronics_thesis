@@ -1,18 +1,21 @@
 # AGENTS.md – Yapay zeka ajanları için proje kuralları
 
-Bu dosya, ekip üyelerinin yapay zeka ajanlarının (Claude Code, Codex, Gemini CLI, Copilot, Cursor vb.) bu repoda nasıl çalışacağını tanımlar. Bu araçlar dosyayı repo açıldığında kendiliğinden okur. **Her oturumun başında bu dosyayı, `STATUS.md`'yi ve `docs/karar_kaydi.md`'yi oku.**
+Bu dosya, ekip üyelerinin yapay zeka ajanlarının (Claude Code, Codex, Gemini CLI, Copilot, Cursor vb.) bu repoda nasıl çalışacağını tanımlar. Bu araçlar dosyayı repo açıldığında kendiliğinden okur.
 
-## Oturum başlangıç protokolü (her ajan bunu kendiliğinden yapar)
+## Temel ilke: plan değişebilir, karar ekip üyesinindir
 
-Kullanıcı sana ayrıca bir şey anlatmak zorunda değildir. Her oturumun başında:
+Bu repodaki plan, görev dağılımı, tasarım tablosu ve hesaplar **bir başlangıç noktasıdır, kesin talimat değildir.** Ekip üyeleri projeyi geliştirirken robotun herhangi bir parçasına, plana veya programa farklı bir yaklaşım getirebilir.
 
-1. **Kullanıcıyı tanı:** `git config user.name` / `user.email` veya GitHub kullanıcı adından kim olduğunu bul (tablo aşağıda). Emin değilsen tek soru sor: "Ekipte hangisisin? (MET / YSY / BBA / YTS)".
-2. **Bağlamı oku:** bu dosya → `STATUS.md` → `docs/karar_kaydi.md` → `docs/gorevler.md` → kullanıcının sahip olduğu klasörün `README.md`'si.
-3. **Güncelle:** `git pull` ile son hâli al. Kullanıcının üzerinde olduğu görevi `STATUS.md`'den ve açık GitHub Issue'larından bul.
-4. **Özetle (3–5 satır):** "Sen X'sin, şu an Y görevindesin, son kararlar şunlar, sıradaki iş şu" – sonra kullanıcının isteğine geç.
-5. **İş bitince:** dal aç → commit → PR (şablonu doldur) → `STATUS.md` satırını güncelle → gerekiyorsa karar kaydına satır ekle.
+- Ajan, kullanıcıya **ne yapması gerektiğini söylemez**, görev atamaz, sıradaki işi dayatmaz. Kullanıcı ne istiyorsa ona yardım eder.
+- Kullanıcı mevcut bir kararı, planı veya başka birinin alanındaki bir tasarımı değiştirmek isterse ajan bunu **engellemez**; değişikliği yapar. Yalnızca etkilediği yerleri (hesaplar, BOM, diğer alt sistemler) bilgi olarak belirtir ve karar kaydına not düşer.
+- Ajan kendi görüşünü sorulursa söyler; sorulmazsa önerilerini kısa tutar.
 
-Kullanıcı "ne yapmalıyım?" derse `docs/gorevler.md`'de kendi adına atanmış, bitmemiş ve tarihi en yakın görevi öner.
+## Oturum başlangıcı
+
+1. Kullanıcıyı tanı: `git config user.name` / GitHub kullanıcı adından (tablo aşağıda). Bulamazsan gerekirse sor.
+2. Bağlamı sessizce oku: bu dosya, `STATUS.md`, `docs/karar_kaydi.md`, ilgili klasörün `README.md`'si; `git pull` ile son hâli al.
+3. Kullanıcının isteğine doğrudan geç. Özet veya yapılacaklar listesi yalnızca kullanıcı isterse verilir.
+4. Değişiklik yaptıysan: kendi dalında commit at, PR aç; tasarım kararı değiştiyse karar kaydına bir satır ekle; kullanıcı isterse `STATUS.md`'yi güncelle.
 
 | GitHub kullanıcı adı | Kısaltma |
 |---|---|
@@ -25,7 +28,7 @@ Kullanıcı "ne yapmalıyım?" derse `docs/gorevler.md`'de kendi adına atanmı�
 
 MKT403/MKT402 bitirme projesi: **GES (güneş enerjisi santrali) panellerini su ve rulo fırça ile temizleyen, otonom, hafif paletli robot.**
 
-Güncel tasarım (Rev. 3) – değiştirmeden önce `docs/karar_kaydi.md`'ye bak:
+Güncel tasarım (Rev. 3) – başlangıç noktasıdır, ekip üyeleri değiştirebilir; geçmişi `docs/karar_kaydi.md`'de:
 
 | Konu | Karar |
 |---|---|
@@ -42,7 +45,9 @@ Güncel tasarım (Rev. 3) – değiştirmeden önce `docs/karar_kaydi.md`'ye bak
 | Şarj | Sıra sonunda kontaklı istasyon: IR 38 kHz kodlu işaret + V kılavuz + yaylı kontaklar; kontaklar robot doğrulanmadan enerjisiz; 14,6 V CC/CV. **Type-C yok** |
 | Konum | Yapılandırılmış harita (sıra boyu/modül sayısı), enkoder + IMU, kenarda ve istasyonda sıfırlama |
 
-## Ekip ve sahiplik
+## Ekip ve sorumluluk alanları
+
+Sorumluluk alanı "kim bu konuyu en iyi biliyor / kime haber verilmeli" demektir; **kimse başkasının alanında değişiklik yapmaktan men edilmez.**
 
 | Kısaltma | Kişi | Alan | Sahip olduğu klasörler |
 |---|---|---|---|
@@ -55,11 +60,11 @@ Güncel tasarım (Rev. 3) – değiştirmeden önce `docs/karar_kaydi.md`'ye bak
 
 ## Çalışma kuralları (ajanlar dahil herkes için)
 
-1. **`main` dalına doğrudan yazma.** Her iş kendi dalında yapılır: `kisaltma/kisa-aciklama` (örn. `yts/istasyon-v-kilavuz`). Değişiklik Pull Request ile gelir, klasör sahibi onaylar (`CODEOWNERS`).
-2. **Başkasının klasörünü** değiştirmen gerekiyorsa önce Issue aç veya o kişiyi PR'da etiketle.
+1. **Dal kullan:** İş kendi dalında yapılır (`kisaltma/kisa-aciklama`, örn. `yts/istasyon-v-kilavuz`) ve PR ile birleştirilir. Bu bir onay zorunluluğu değil, herkesin değişikliği görebilmesi içindir; `CODEOWNERS` yalnızca ilgili kişiye bildirim gönderir.
+2. **Başkasının alanında** değişiklik serbesttir; PR'da o kişiyi etiketlemek yeterlidir.
 3. **İkili dosyalar birleştirilemez** (`.docx`, `.xlsx`, `.SLDPRT`, `.SLDASM`, `.SLDDRW`, `.pdf`). Düzenlemeden önce kilitle: `git lfs lock <dosya>`, bitince `git lfs unlock <dosya>`. Kilitli dosyayı düzenleme.
-4. **Tasarım kararı değişiyorsa** (yukarıdaki tablo), PR'da `docs/karar_kaydi.md`'ye yeni bir satır ekle: tarih, karar, gerekçe, kim. Eski kararı silme, "geçersiz" diye işaretle.
-5. **`STATUS.md`'yi güncelle:** bir işe başlarken ve bitirirken kendi satırını değiştir.
+4. **Tasarım kararı değişiyorsa** `docs/karar_kaydi.md`'ye bir satır ekle (tarih, karar, gerekçe, kim). Bu bir izin süreci değil, ekibin neyin neden değiştiğini görmesi içindir. Eski kararı silme, "geçersiz" diye işaretle.
+5. **`STATUS.md`** isteğe bağlı bir pano; kullanıcı isterse güncellenir.
 6. **Sayı uydurma.** Hesaplar `mekanik/hesaplar/hesaplar_rev3.py` ve `bom/GES_Robotu_BOM_v2.xlsx` (Hesaplar sayfası) ile tutarlı olmalı. Literatürden bir bilgi kullanıyorsan `literatur/GES_Robotu_Literatur_Taramasi.xlsx`'teki kayda dayan; kaynağı olmayan rakam yazma.
 7. **Şifre, API anahtarı, Wi-Fi bilgisi commit etme.** Bunlar `secrets.h` / `.env` içinde tutulur (git'e girmez); örnek için `firmware/secrets.example.h`.
 8. **Büyük dosyalar:** 50 MB üstü (videolar, ham test kayıtları) repoya girmez; Drive'a koy, linkini ilgili klasöre `LINKLER.md` olarak ekle.
@@ -84,7 +89,7 @@ scripts/     yardımcı scriptler (örn. Issue oluşturma)
 
 R1 Literatür – H4 (18.10) · R2 Problem tanımı – H5 (25.10) · R3 Proje planı – H6 (01.11) · R4 Kavramsal tasarım – H12 (13.12) · MKT403 final – H14 (27.12) · MKT402: imalat ve test (bahar).
 
-## Açık riskler (ajanlar bunları göz önünde tutmalı)
+## Açık riskler (bilgi amaçlı)
 
 - Tork payı ≈1,1 ve kuru çekiş oranı sınırda; ıslak camda tırmanılamıyor → Faz-1 rampa testi bekleniyor (palet 40–60 mm, 12/24 V kararı).
 - Hortum çekme yükü yönetilmezse motor yetersiz kalıyor.

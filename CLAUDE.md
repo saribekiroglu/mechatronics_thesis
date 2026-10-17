@@ -4,4 +4,4 @@ Bu repodaki tüm kurallar ve proje bağlamı **AGENTS.md** dosyasındadır; önc
 
 @AGENTS.md
 
-Oturum başında ayrıca `STATUS.md` ve `docs/karar_kaydi.md` dosyalarını oku. İşe başlarken ve bitirirken `STATUS.md`'deki kendi satırını güncelle.
+Plan ve kararlar başlangıç noktasıdır; kullanıcıya iş dayatma, ne isterse ona yardım et.

@@ -10,7 +10,7 @@ Güneş enerjisi santrali panellerini su ve rulo fırça ile temizleyen, ≈8,5 
 |---|---|
 | Kim ne üzerinde çalışıyor? | [`STATUS.md`](STATUS.md) ve GitHub Projects panosu |
 | Tasarım kararları ve gerekçeleri | [`docs/karar_kaydi.md`](docs/karar_kaydi.md) |
-| Görev listesi (R3) | [`docs/gorevler.md`](docs/gorevler.md) |
+| Görev listesi (R3 – başlangıç planı, değiştirilebilir) | [`docs/gorevler.md`](docs/gorevler.md) |
 | Raporlar | [`docs/raporlar/`](docs/raporlar/) |
 | Malzeme listesi ve hesaplar | [`bom/`](bom/), [`mekanik/hesaplar/`](mekanik/hesaplar/) |
 | Literatür, makaleler, patentler | [`literatur/`](literatur/) |
@@ -28,8 +28,8 @@ GitHub Desktop kullanıyorsan LFS'yi otomatik kurar; kilitleme için komut satı
 
 ## Yapay zeka ile çalışma
 
-**Kodlama ajanları** (Claude Code, Codex, Gemini CLI, Copilot, Cursor): Repoyu açman yeterli. `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` dosyalarını kendileri okur, kim olduğunu bulur, durumu özetler ve kurallara göre çalışır. Ayrıca anlatman gerekmez.
+**Kodlama ajanları** (Claude Code, Codex, Gemini CLI, Copilot, Cursor): Repoyu açman yeterli. `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` dosyalarını kendileri okur, kim olduğunu ve projenin bağlamını bilir; sana iş dayatmaz, ne istersen ona yardım eder. Plan ve kararlar başlangıç noktasıdır, değiştirebilirsin.
 
 **Web sohbetleri** (claude.ai, ChatGPT, Gemini sitesi) repoyu kendiliğinden görmez. Sohbetin başına şunu yapıştır ve `AGENTS.md`, `STATUS.md`, `docs/karar_kaydi.md` dosyalarını ekle:
 
-> Ben [adın] ([MET/YSY/BBA/YTS]). Ekli AGENTS.md bizim bitirme projemizin kuralları ve bağlamı; STATUS.md kimin ne yaptığını, karar_kaydi.md alınan kararları gösteriyor. Bunlara göre çalış, kararlarla çelişen öneri yapma; bir kararı değiştirmek gerekiyorsa açıkça söyle. Şimdi şunu istiyorum: ...
+> Ben [adın] ([MET/YSY/BBA/YTS]). Ekli AGENTS.md bizim bitirme projemizin kuralları ve bağlamı; STATUS.md kimin ne yaptığını, karar_kaydi.md alınan kararları gösteriyor. Bunları bağlam olarak kullan; plan ve kararlar kesin değil, farklı bir yaklaşım istersem ona göre yardım et ve neleri etkilediğini söyle. Şimdi şunu istiyorum: ...

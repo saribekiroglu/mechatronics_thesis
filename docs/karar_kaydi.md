@@ -1,6 +1,6 @@
 # Karar kaydı
 
-Tasarım kararları burada tutulur. Karar değişirse eski satır silinmez; "Durum" sütunu **geçersiz** yapılır ve yeni satır eklenir.
+Tasarım kararları burada tutulur. Kayıt bir izin süreci değildir; herkes kararı değiştirebilir, yalnızca neyin neden değiştiği görünsün diye satır eklenir. Karar değişirse eski satır silinmez; "Durum" sütunu **geçersiz** yapılır ve yeni satır eklenir.
 
 | # | Tarih | Karar | Gerekçe | Karar veren | Durum |
 |---|---|---|---|---|---|
