@@ -1,0 +1,29 @@
+# Gizli bilgiler
+secrets.h
+.env
+*.key
+
+# Office / SolidWorks geçici dosyaları
+~$*
+*.tmp
+*.bak
+*.SLDBAK
+~lock*
+
+# Derleme çıktıları
+.pio/
+build/
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+
+# Büyük medya – Drive'a koyun, linkini LINKLER.md'ye yazın
+*.mp4
+*.mov
+*.avi
+
+# İşletim sistemi
+Thumbs.db
+desktop.ini
+.DS_Store
