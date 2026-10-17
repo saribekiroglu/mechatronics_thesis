@@ -6,7 +6,7 @@ Her üye (ve ajanı) işe başlarken ve bitirirken kendi satırını günceller.
 |---|---|---|---|---|
 | MET – Muhammed Emir Tokaç | _(kendin doldur)_ | – | – | – |
 | YSY – Yusuf Serdar Yalçıner | _(kendin doldur)_ | – | – | – |
-| BBA – Barış Berker Arslan | _(kendin doldur)_ | – | – | – |
+| BBA – Barış Berker Arslan | Gömülü sistem çalışması | – | – | – |
 | YTS – Yusuf Taha Sarıbekiroğlu | Repo kurulumu; istasyon ve su sistemi; R1 literatür (tamamlandı) | – | – | 17.10.2026 |
 
 ## Bu haftanın hedefleri (H4: 12–18.10.2026)
