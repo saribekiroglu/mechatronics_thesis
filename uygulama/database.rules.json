@@ -1,0 +1,11 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    "canli":    { ".write": "auth != null && auth.token.email === 'istasyon@ges-robotu.local'" },
+    "gunluk":   { ".write": "auth != null && auth.token.email === 'istasyon@ges-robotu.local'" },
+    "gorevler": { ".write": "auth != null && auth.token.email === 'istasyon@ges-robotu.local'", ".indexOn": ["bas"] },
+    "uyarilar": { ".write": "auth != null && auth.token.email === 'istasyon@ges-robotu.local'", ".indexOn": ["ts"] },
+    "bakim":    { ".write": "auth != null" },
+    "komut":    { ".write": "auth != null" }
+  }
+}

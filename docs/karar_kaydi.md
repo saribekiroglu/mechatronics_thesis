@@ -18,3 +18,8 @@ Tasarım kararları burada tutulur. Kayıt bir izin süreci değildir; herkes ka
 | 12 | 10.2026 | Şarj yalnız kontaklı istasyondan (IR işaret + V kılavuz + yaylı kontak, 14,6 V CC/CV); robotta ayrı soket yok | Açık havada soket su/toz alır; otomatik yerleşmede fişe girmek hassas hizalama ister | Ekip | Geçerli |
 | 13 | 10.2026 | Ekipteki Keyence sensörler kullanılacak: CZ-V21A + CZ-H35S/H32 kir, LR-ZB250AN ön kenar, LV-S41 + LV-N12N yedek kenar | Elde mevcut, endüstriyel; kir tespiti boşluğunu kapatır | Ekip | Geçerli – kütle/güç etkisi cam testinden sonra hesaplara girecek |
 | 14 | 10.2026 | Strateji: "kuru tırman, ıslak in" | Islak camda tırmanma çekişi yetersiz (oran 0,63) | Ekip | Geçerli – Faz-1 testiyle doğrulanacak |
+| 15 | 18.10.2026 | Mobil uygulama ilk prototipe eklendi (R3'te "kapsam dışı" idi) | Bakım, su ve çalışma takibi; okul tanıtımı | Ekip | Geçerli |
+| 16 | 18.10.2026 | Uygulama PWA (web uygulaması, "Ana Ekrana Ekle"); Apple Developer/App Store yok | Ücretsiz, iPhone + Android, kurulum kolay | YTS | Geçerli |
+| 17 | 18.10.2026 | Veritabanı Firebase Realtime Database; istasyon ESP32 köprü | ESP32 desteği kolay, canlı veri, ücretsiz plan yeterli | Ekip | Geçerli |
+| 18 | 18.10.2026 | Prototipte bağlantı telefon hotspot'u (2,4 GHz, sabit kanal); modem/4G yok | Okul ağı ESP32 için sorunlu; tanıtım için yeterli | Ekip | Geçerli – sahada 4G modem gerekebilir |
+| 19 | 18.10.2026 | Su seviyesi damacana tartısıyla (yük hücresi + HX711); isteğe bağlı akış sensörü | Litre cinsinden doğrudan ölçüm | Ekip | Geçerli |

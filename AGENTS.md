@@ -42,6 +42,7 @@ Güncel tasarım (Rev. 3) – başlangıç noktasıdır, ekip üyeleri değişti
 | Sensörler | 4 × VL53L0X (TCA9548A), BNO055 (manyetometresiz), enkoderler, INA226, DS18B20, limit switch; ekipte mevcut Keyence LR-ZB250AN (ön kenar), LV-S41 + LV-N12N (yedek kenar), CZ-V21A + CZ-H35S/H32 (kir tespiti) |
 | Kamera | **Yok.** Kir tespiti sensörle |
 | Haberleşme | Robot ↔ depo/istasyon ESP-NOW, 1 Hz yaşam sinyali, 3 s kayıpta pompa kapanır. Güvenlik işlevleri kablolu |
+| Mobil uygulama | PWA (`uygulama/`), Firebase Realtime Database; istasyon ESP32 telefon hotspot'u üzerinden veri yazar. Veri yapısı: `docs/telemetri.md` |
 | Şarj | Sıra sonunda kontaklı istasyon: IR 38 kHz kodlu işaret + V kılavuz + yaylı kontaklar; kontaklar robot doğrulanmadan enerjisiz; 14,6 V CC/CV. **Type-C yok** |
 | Konum | Yapılandırılmış harita (sıra boyu/modül sayısı), enkoder + IMU, kenarda ve istasyonda sıfırlama |
 
@@ -54,7 +55,7 @@ Sorumluluk alanı "kim bu konuyu en iyi biliyor / kime haber verilmeli" demektir
 | MET | Muhammed Emir Tokaç | **Proje yöneticisi**, elektrik | `docs/`, `elektrik/` |
 | YSY | Yusuf Serdar Yalçıner | Mekanik | `mekanik/` |
 | BBA | Barış Berker Arslan | Gömülü yazılım | `firmware/` |
-| YTS | Yusuf Taha Sarıbekiroğlu | İstasyon, su–pompa; esnek (flex) destek | `istasyon/`, `bom/`, `literatur/` |
+| YTS | Yusuf Taha Sarıbekiroğlu | İstasyon, su–pompa, mobil uygulama; esnek (flex) destek | `istasyon/`, `uygulama/`, `bom/`, `literatur/` |
 
 `testler/` ortak alandır.
 
@@ -78,6 +79,7 @@ docs/        raporlar (R1–R4, final), karar kaydı, görev listesi, Gantt
 mekanik/     CAD (SolidWorks), teknik resim, hesaplar
 elektrik/    şemalar, güç bütçesi, kablaj
 firmware/    robot/, istasyon/, depo/ – ESP32 kodları
+uygulama/    mobil uygulama (PWA) + Firebase ayarları
 istasyon/    şarj istasyonu ve su–pompa sistemi tasarımı
 bom/         malzeme listesi, sipariş takibi
 literatur/   literatür matrisi, makale PDF'leri (makaleler/), TÜRKPATENT, rakip analizi

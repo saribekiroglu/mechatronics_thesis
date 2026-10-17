@@ -1,0 +1,41 @@
+:root{--bg:#0f172a;--kart:#1e293b;--cizgi:#334155;--yazi:#e2e8f0;--soluk:#94a3b8;--mavi:#38bdf8;--yesil:#34d399;--sari:#fbbf24;--kirmizi:#f87171}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--yazi);font:15px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.top{display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top) + 14px) 16px 10px}
+h1{font-size:20px;margin:0}
+.sub{display:flex;align-items:center;gap:6px;color:var(--soluk);font-size:13px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--soluk)}
+.dot.ok{background:var(--yesil)}.dot.kotu{background:var(--kirmizi)}
+.pill{background:var(--sari);color:#111;font-weight:700;font-size:11px;padding:3px 8px;border-radius:99px}
+main{padding:0 16px calc(env(safe-area-inset-bottom) + 84px)}
+.sayfa{display:none}.sayfa.aktif{display:block}
+.kart{background:var(--kart);border:1px solid var(--cizgi);border-radius:14px;padding:14px;margin-bottom:12px}
+.etiket{color:var(--soluk);font-size:12px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.muted{color:var(--soluk);font-size:13px}.kucuk{font-size:12px}
+.durumYazi{font-size:24px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.buyuk{font-size:30px;font-weight:700}.buyuk small{font-size:14px;color:var(--soluk);margin-left:2px}
+.orta{font-size:18px;font-weight:700}
+.bar{height:6px;background:var(--cizgi);border-radius:99px;overflow:hidden;margin:6px 0}
+.bar i{display:block;height:100%;width:0;background:var(--yesil);transition:width .4s}
+.bar.su i{background:var(--mavi)}
+.bar i.orta-seviye{background:var(--sari)}.bar i.dusuk{background:var(--kirmizi)}
+.kir{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:700}.kir .ok{color:var(--soluk)}
+.uyari{border-color:var(--kirmizi)}
+.satir{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.seviye{font-size:11px;font-weight:700;padding:2px 7px;border-radius:99px;background:var(--cizgi)}
+.seviye.kritik{background:var(--kirmizi);color:#111}.seviye.uyari{background:var(--sari);color:#111}
+.grafik{display:flex;align-items:flex-end;gap:6px;height:140px;padding-top:10px}
+.grafik div{flex:1;text-align:center;font-size:11px;color:var(--soluk)}
+.grafik b{display:block;background:var(--mavi);border-radius:4px 4px 0 0;margin-bottom:4px}
+button{font:inherit}
+.btn{background:var(--cizgi);color:var(--yazi);border:0;border-radius:8px;padding:6px 10px;font-size:13px}
+nav.alt{position:fixed;left:0;right:0;bottom:0;display:flex;background:#0b1222;border-top:1px solid var(--cizgi);padding-bottom:env(safe-area-inset-bottom)}
+nav.alt button{flex:1;background:none;border:0;color:var(--soluk);padding:14px 0;font-size:13px;position:relative}
+nav.alt button.aktif{color:var(--mavi);font-weight:700}
+.rozet{position:absolute;top:6px;margin-left:4px;background:var(--kirmizi);color:#111;font-size:10px;border-radius:99px;padding:1px 6px}
+dialog{background:var(--kart);color:var(--yazi);border:1px solid var(--cizgi);border-radius:14px;width:min(92vw,360px)}
+dialog input{width:100%;margin:6px 0;padding:10px;border-radius:8px;border:1px solid var(--cizgi);background:var(--bg);color:var(--yazi)}
+dialog button{width:100%;margin-top:8px;padding:10px;border:0;border-radius:8px;background:var(--mavi);color:#111;font-weight:700}
+.hata{color:var(--kirmizi);font-size:13px;min-height:18px}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="GES Robotu">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>GES Robotu</title>
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>GES Robotu</h1>
+      <div class="sub"><span id="baglanti" class="dot"></span><span id="baglantiYazi">Bağlanıyor…</span></div>
+    </div>
+    <span id="modEtiket" class="pill" hidden>DEMO</span>
+  </header>
+
+  <main>
+    <!-- ANA -->
+    <section id="ana" class="sayfa aktif">
+      <div class="kart durum">
+        <div class="etiket">Robot durumu</div>
+        <div id="durum" class="durumYazi">—</div>
+        <div id="durumAlt" class="muted">—</div>
+      </div>
+
+      <div class="grid2">
+        <div class="kart">
+          <div class="etiket">Batarya</div>
+          <div class="buyuk"><span id="bat">—</span><small>%</small></div>
+          <div class="bar"><i id="batBar"></i></div>
+          <div class="muted" id="batAlt">—</div>
+        </div>
+        <div class="kart">
+          <div class="etiket">Damacanadaki su</div>
+          <div class="buyuk"><span id="su">—</span><small>L</small></div>
+          <div class="bar su"><i id="suBar"></i></div>
+          <div class="muted" id="suAlt">—</div>
+        </div>
+      </div>
+
+      <div class="kart">
+        <div class="etiket">Bugün</div>
+        <div class="grid3">
+          <div><div class="orta" id="bugunSure">—</div><div class="muted">çalışma</div></div>
+          <div><div class="orta" id="bugunAlan">—</div><div class="muted">temizlenen</div></div>
+          <div><div class="orta" id="bugunSu">—</div><div class="muted">su</div></div>
+        </div>
+      </div>
+
+      <div class="kart">
+        <div class="etiket">Temizlik kalitesi (fırça önü → arkası)</div>
+        <div class="kir"><span id="kirOn">—</span><span class="ok">→</span><span id="kirArka">—</span></div>
+        <div class="muted">Keyence CZ okuması; yüksek değer = temiz</div>
+      </div>
+
+      <div id="sonUyari" class="kart uyari" hidden></div>
+    </section>
+
+    <!-- GEÇMİŞ -->
+    <section id="gecmis" class="sayfa">
+      <div class="kart">
+        <div class="etiket">Son 7 gün – temizlenen alan (m²)</div>
+        <div id="grafik" class="grafik"></div>
+      </div>
+      <div id="gorevListe"></div>
+    </section>
+
+    <!-- BAKIM -->
+    <section id="bakim" class="sayfa">
+      <div id="bakimListe"></div>
+      <p class="muted kucuk">Eşikler prototip için tahminidir; testlerle güncellenecek. "Değiştirildi" sayacı sıfırlar.</p>
+    </section>
+
+    <!-- UYARILAR -->
+    <section id="uyarilar" class="sayfa">
+      <div id="uyariListe"></div>
+    </section>
+  </main>
+
+  <nav class="alt">
+    <button data-s="ana" class="aktif">Ana</button>
+    <button data-s="gecmis">Geçmiş</button>
+    <button data-s="bakim">Bakım</button>
+    <button data-s="uyarilar">Uyarılar<span id="uyariSayi" class="rozet" hidden></span></button>
+  </nav>
+
+  <dialog id="giris">
+    <form method="dialog" id="girisForm">
+      <h2>Giriş</h2>
+      <input id="eposta" type="email" placeholder="E-posta" autocomplete="username" required>
+      <input id="sifre" type="password" placeholder="Şifre" autocomplete="current-password" required>
+      <div id="girisHata" class="hata"></div>
+      <button type="submit">Giriş yap</button>
+    </form>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
