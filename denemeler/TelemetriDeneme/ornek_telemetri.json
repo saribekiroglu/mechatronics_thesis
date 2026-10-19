@@ -1,0 +1,208 @@
+{
+  "canli": {
+    "durum": "BEKLEMEDE",
+    "batarya_yuzde": 82,
+    "batarya_v": 13.1,
+    "akim_a": 0.45,
+    "sicaklik_bat": 26.4,
+    "su_litre": 15.2,
+    "su_dk_kaldi": 12.7,
+    "sira": 3,
+    "konum_m": 4.2,
+    "kir_on": 2840,
+    "kir_arka": 1630,
+    "firca_akim_a": 0,
+    "ts": 1792401761400
+  },
+  "gunluk": {
+    "2026-10-13": {
+      "sure_s": 4860,
+      "alan_m2": 122,
+      "su_l": 15.6,
+      "enerji_wh": 55
+    },
+    "2026-10-14": {
+      "sure_s": 4500,
+      "alan_m2": 113,
+      "su_l": 15,
+      "enerji_wh": 51
+    },
+    "2026-10-15": {
+      "sure_s": 4140,
+      "alan_m2": 104,
+      "su_l": 14.4,
+      "enerji_wh": 47
+    },
+    "2026-10-16": {
+      "sure_s": 3780,
+      "alan_m2": 95,
+      "su_l": 13.8,
+      "enerji_wh": 43
+    },
+    "2026-10-17": {
+      "sure_s": 3420,
+      "alan_m2": 86,
+      "su_l": 13.2,
+      "enerji_wh": 39
+    },
+    "2026-10-18": {
+      "sure_s": 3060,
+      "alan_m2": 77,
+      "su_l": 12.6,
+      "enerji_wh": 35
+    },
+    "2026-10-19": {
+      "sure_s": 2700,
+      "alan_m2": 68,
+      "su_l": 12,
+      "enerji_wh": 31
+    }
+  },
+  "gorevler": {
+    "gorev_1": {
+      "bas": 1792387361400,
+      "sure_s": 1200,
+      "alan_m2": 27,
+      "su_l": 5,
+      "enerji_wh": 14,
+      "bitis_nedeni": "TAMAMLANDI"
+    },
+    "gorev_2": {
+      "bas": 1792372961400,
+      "sure_s": 1320,
+      "alan_m2": 30,
+      "su_l": 5.4,
+      "enerji_wh": 16,
+      "bitis_nedeni": "TAMAMLANDI"
+    },
+    "gorev_3": {
+      "bas": 1792358561400,
+      "sure_s": 1440,
+      "alan_m2": 33,
+      "su_l": 5.8,
+      "enerji_wh": 18,
+      "bitis_nedeni": "DUR_ISTEGI"
+    },
+    "gorev_4": {
+      "bas": 1792344161400,
+      "sure_s": 1560,
+      "alan_m2": 36,
+      "su_l": 6.2,
+      "enerji_wh": 20,
+      "bitis_nedeni": "TAMAMLANDI"
+    },
+    "gorev_5": {
+      "bas": 1792329761400,
+      "sure_s": 1680,
+      "alan_m2": 39,
+      "su_l": 6.6,
+      "enerji_wh": 22,
+      "bitis_nedeni": "TAMAMLANDI"
+    },
+    "gorev_6": {
+      "bas": 1792315361400,
+      "sure_s": 1800,
+      "alan_m2": 42,
+      "su_l": 7,
+      "enerji_wh": 24,
+      "bitis_nedeni": "TAMAMLANDI"
+    },
+    "gorev_7": {
+      "bas": 1792300961400,
+      "sure_s": 1920,
+      "alan_m2": 45,
+      "su_l": 7.4,
+      "enerji_wh": 26,
+      "bitis_nedeni": "TAMAMLANDI"
+    },
+    "gorev_8": {
+      "bas": 1792286561400,
+      "sure_s": 2040,
+      "alan_m2": 48,
+      "su_l": 7.800000000000001,
+      "enerji_wh": 28,
+      "bitis_nedeni": "TAMAMLANDI"
+    }
+  },
+  "uyarilar": {
+    "demo_1": {
+      "ts": 1792401641400,
+      "seviye": "bilgi",
+      "mesaj": "Yerel demo hazır. Robot ve istasyon bağlı değil.",
+      "kod": "DEMO_001"
+    },
+    "demo_2": {
+      "ts": 1792398161400,
+      "seviye": "uyari",
+      "mesaj": "Nozul/süzgeç bakım sayacı eşiğe yaklaşıyor (örnek).",
+      "kod": "BAKIM_020"
+    },
+    "demo_3": {
+      "ts": 1792394561400,
+      "seviye": "kritik",
+      "mesaj": "Bağlantı kaybı senaryosundan örnek kayıt.",
+      "kod": "DEMO_BAGLANTI"
+    },
+    "demo_4": {
+      "ts": 1792315361400,
+      "seviye": "bilgi",
+      "mesaj": "Örnek temizlik görevi tamamlandı.",
+      "kod": "GOREV_BITIS"
+    }
+  },
+  "bakim": {
+    "firca": {
+      "ad": "Rulo fırça",
+      "sayac": 37.5,
+      "esik": 100,
+      "birim": "saat",
+      "son_degisim": 1790587361400,
+      "not": "Akım ve ham kir değerlerinin trendi ayrıca izlenir."
+    },
+    "palet": {
+      "ad": "Palet kayışları",
+      "sayac": 12.4,
+      "esik": 50,
+      "birim": "km",
+      "son_degisim": 1790587361400,
+      "not": "Enkoder mesafesi esas alınır."
+    },
+    "motor": {
+      "ad": "Sürüş motorları",
+      "sayac": 68,
+      "esik": 500,
+      "birim": "saat",
+      "son_degisim": 1790587361400,
+      "not": "Çalışma süresi takip edilir."
+    },
+    "pompa": {
+      "ad": "Pompa",
+      "sayac": 42,
+      "esik": 300,
+      "birim": "saat",
+      "son_degisim": 1790587361400,
+      "not": "Depo kartının çalışma sayacı."
+    },
+    "nozul": {
+      "ad": "Nozul / süzgeç",
+      "sayac": 18.2,
+      "esik": 20,
+      "birim": "saat",
+      "son_degisim": 1790587361400,
+      "not": "Temizlik sonrası sayaç sıfırlanır."
+    },
+    "batarya": {
+      "ad": "Batarya",
+      "sayac": 48,
+      "esik": 2000,
+      "birim": "döngü",
+      "son_degisim": 1790587361400,
+      "not": "LiFePO4 için tahmini başlangıç eşiği."
+    }
+  },
+  "komut": {
+    "istek": "DUR",
+    "ts": 1792401761400,
+    "kim": "yerel-demo"
+  }
+}
